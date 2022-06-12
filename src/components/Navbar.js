@@ -14,7 +14,9 @@ const Navbar = () => {
   return (
     <>
       <nav className={styles.nav}>
-        <h1 className={styles.h1}>Redux Toolkit</h1>
+        <h1 className={styles.h1}>
+          <Link to={"/"}>Redux Toolkit</Link>
+        </h1>
         <ul className="hidden md:flex ulitems">
           <li>
             <Link to={"/employees"}>Employees</Link>
@@ -37,7 +39,9 @@ const Navbar = () => {
         </div>
 
         <div className={!nav && !click ? styles.showNav : styles.hideNav}>
-          <h1 className={styles.h1}>Redux Toolkit</h1>
+          <h1 className={styles.h1} onClick={handleClick}>
+            <Link to={"/"}>Redux Toolkit</Link>
+          </h1>
 
           <ul className={styles.navItems}>
             <li onClick={handleClick}>
