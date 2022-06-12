@@ -8,8 +8,8 @@ const Navbar = () => {
   const [nav, setNav] = useState(true);
   const handleNav = () => setNav(!nav);
 
-  const [showMenuItems, setShowMenuItems] = useState(true);
-  const handleClick = () => setShowMenuItems(!showMenuItems);
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
   return (
     <>
@@ -29,11 +29,14 @@ const Navbar = () => {
 
         {/* Navigigation menu */}
         <div onClick={handleNav} className="block md:hidden">
-          {!nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+          {!nav && !click ? (
+            <AiOutlineClose size={30} />
+          ) : (
+            <AiOutlineMenu size={30} />
+          )}
         </div>
 
-        {/* <div className={!showMenuItems ? "hidden" : null}> */}
-        <div className={!nav ? styles.showNav : styles.hideNav}>
+        <div className={!nav && !click ? styles.showNav : styles.hideNav}>
           <h1 className={styles.h1}>Redux Toolkit</h1>
 
           <ul className={styles.navItems}>
@@ -48,7 +51,6 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        {/* </div> */}
       </nav>
     </>
   );
