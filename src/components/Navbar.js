@@ -43,14 +43,14 @@ const Navbar = () => {
             <Link to={"/"}>Redux Toolkit</Link>
           </h1>
 
-          <ul className={styles.navItems}>
-            <li onClick={handleClick}>
+          <ul className={styles.navItems} onClick={handleClick}>
+            <li>
               <Link to={"/employees"}>Employees</Link>
             </li>
-            <li onClick={handleClick}>
+            <li>
               <Link to={"/counter"}>Counter</Link>
             </li>
-            <li onClick={handleClick}>
+            <li>
               <Link to={"/users"}>Users</Link>
             </li>
           </ul>
