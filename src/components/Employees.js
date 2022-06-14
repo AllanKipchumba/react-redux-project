@@ -9,11 +9,6 @@ const Employees = () => {
 
   const dispatch = useDispatch();
 
-  // const changeSelected = (empID) => {
-  //   // dispatch an action
-  //   dispatch(updateSelected(empID));
-  // };
-
   return (
     <>
       <div className="container mt-5 ">
@@ -31,6 +26,7 @@ const Employees = () => {
                     <li key={employee.id} className="list-group-item">
                       <input
                         type="checkbox"
+                        checked={employee.isSelected}
                         onChange={() => dispatch(updateSelected(employee.id))}
                         className="form-check-input me-2"
                       />
