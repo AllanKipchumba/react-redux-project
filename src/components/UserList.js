@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { PulseLoader } from "react-spinners";
 
 const UserList = () => {
   const [state, setState] = useState({
@@ -43,7 +44,7 @@ const UserList = () => {
         </div>
         <div className="row">
           <div className="col">
-            {loading && <h2>...Loading</h2>}
+            {loading && <PulseLoader color={"#3985C2"} size={10} />}
 
             {!loading && errorMessage.length > 0 && (
               <h3 className="text-danger">{errorMessage}</h3>
