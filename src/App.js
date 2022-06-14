@@ -4,7 +4,8 @@ import Counter from "./components/Counter";
 import Employees from "./components/Employees";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import UserList from "./components/UserList";
+// import UserList from "./components/UserList";
+import UserListRedux from "./components/userListRedux";
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/employees" element={<Employees />} />
           <Route path="/counter" element={<Counter />} />
-          <Route path="/users" element={<UserList />} />
+          <Route path="/users" element={<UserListRedux />} />
         </Routes>
       </div>
     </>
