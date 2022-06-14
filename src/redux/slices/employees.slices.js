@@ -9,9 +9,9 @@ const employeeSlice = createSlice({
   name: "employees",
   initialState: initialState,
   reducers: {
-    updateSelected: ({ employees }, { payload }) => {
-      employees = employees.map((employee) => {
-        if (employee.id === payload) {
+    updateSelected: (state, action) => {
+      state.employees = state.employees.map((employee) => {
+        if (employee.id === action.payload) {
           return {
             ...employee,
             isSelected: !employee.isSelected,
