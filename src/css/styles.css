@@ -1,11 +1,3 @@
-.ulItems>li {
-    padding: 4;
+.ulItems {
+    background-color: red;
 }
-
-
-/* count component */
-
-
-/* .main-div {
-    width: max-content !important;
-} */

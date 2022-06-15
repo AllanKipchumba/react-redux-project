@@ -1,5 +1,5 @@
 nav {
-    @apply flex justify-between items-center mx-auto px-4 text-white bg-[#000300];
+    @apply flex justify-between items-center mx-auto px-4 text-white bg-[#3f8df3];
 }
 
 h1 {
@@ -49,4 +49,16 @@ ul>li {
 
 .buttonDiv>button:hover {
     @apply bg-blue-700;
+}
+
+.ulitem {
+    text-decoration: none;
+    color: #fff;
+}
+
+.ulitem:hover {
+    background-color: #3f8df3;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
 }
